@@ -1,3 +1,53 @@
-body{
-    background-image: url('/imgs/gradienteE.png');
+@font-face {
+    font-family: 'Brown Sugar';
+    src: url('/fonts/BrownSugar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: linear-gradient(to left, #96A9C2, #001228);
+    height: 5rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header img{
+    max-width:12rem;
+    max-height:80px;
+    display: flex;
+    padding-left: 1rem;
+}
+
+body{
+    margin-top: 100px;
+    background: linear-gradient(to left, #173A59, #71849D);/*fundo da pagina*/
+    
+}
+
+h1{
+font-family: 'Brown Sugar', sans-serif;
+    font-weight: 300; /* Tente valores como 100, 200, ou 300 */
+    font-size: 3em; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #ffffff; /* Cor branca para o texto */
+    text-align: center; /* Centraliza o texto */
+
+    /* Margem */
+    margin-bottom: 20px;
+    margin-top: 100px;
+    
+    letter-spacing: 2px; /* Espaçamento entre letras para um efeito mais refinado */
+}
+
+main img{
+    
+}
+

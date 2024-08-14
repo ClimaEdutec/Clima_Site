@@ -1,0 +1,16 @@
+/*
+colocar no css:
+
+
+@font-face {
+    font-family: 'Brown Sugar';
+    src: url('/fonts/BrownSugar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+usando a fonte
+font-family: 'Brown Sugar', sans-serif;
+
+
+*/
