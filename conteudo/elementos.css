@@ -56,23 +56,4 @@ main{
     margin-top: 5rem;
     align-items: center;
     display: flex;
-    gap: 6rem;
-}
-.intro h1{
-    font-size: 5rem;
-    display: flex;
-    text-align: center;
-    padding-right: 5rem;
-}
-.intro p{
-    font-size: 1.5rem;
-    display: flex;
-    text-align: center;
-}
-.clima a{
-    max-width:20rem;
-    max-height: 20rem;
-    width: 20rem;
-    height: 20rem;
-    display: flex;
 }

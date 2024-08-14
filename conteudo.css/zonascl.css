@@ -26,8 +26,12 @@ body {
 }
 
 h1 {
+    display: flex;
     margin-top: 100px;
 }
-.div ZP p {
 
+.ZP {
+    display: flex;
+    padding: 10rem;
+    align-items: center;
 }

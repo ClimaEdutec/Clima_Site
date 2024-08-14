@@ -33,21 +33,13 @@ body{
     
 }
 
-h1{
-font-family: 'Brown Sugar', sans-serif;
-    font-weight: 300; /* Tente valores como 100, 200, ou 300 */
-    font-size: 3em; /* Ajuste o tamanho da fonte conforme necessário */
-    color: #ffffff; /* Cor branca para o texto */
-    text-align: center; /* Centraliza o texto */
-
-    /* Margem */
-    margin-bottom: 20px;
-    margin-top: 100px;
-    
-    letter-spacing: 2px; /* Espaçamento entre letras para um efeito mais refinado */
+#cima{
+    gap: 100px;
 }
 
-main img{
-    
+#cima h1{
+    font-family: 'Brown Sugar', sans-serif;
+    color: #ffffff; /* Cor branca para o texto */
+    text-align: right; /* Centraliza o texto */
 }
 
