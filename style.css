@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,12 +10,29 @@ header{
     background: -webkit-linear-gradient(right,  #FFFFFF 0%,#B9C9DF 57%,#C1D0E2 51%, #7E9CC3 100%); 
     background: -o-linear-gradient(right,  #FFFFFF 0%,#B9C9DF 57%,#C1D0E2 51%, #7E9CC3 100%); 
     background: -ms-linear-gradient(right,  #FFFFFF 0%,#B9C9DF 57%,#C1D0E2 51%, #7E9CC3 100%);
-    background: linear-gradient(to right,  #FFFFFF 0%,#B9C9DF 57%,#C1D0E2 51% #7E9CC3 100%);
-    height: 5rem;
+    background: linear-gradient(to right,  #FFFFFF 0%,#B9C9DF 57%,#C1D0E2 51% #7E9CC3 100%); 
+    /* não precisa disso tudo mais eu sou o GOAT */
+    height: 80px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    padding: 1.5rem;
+    margin-inline: 7.5rem;
+}
+header img{
+    max-width:12.5rem;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    display: flex;
+    padding-right: 5rem;
 }
