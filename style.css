@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Brown Sugar';
-    src: url('/fonte/Brown-Sugar.ttf') format('truetype');
+    src: url('/fonts/BrownSugar.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -62,7 +62,7 @@ nav {
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha verticalmente a logo */
 }
 
 .logo img {
