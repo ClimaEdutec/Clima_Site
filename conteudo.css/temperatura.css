@@ -37,7 +37,7 @@ body{
 
 nav {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
-    padding: 0.5rem 1rem; /* Diminuir o padding para reduzir a altura da barra */
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,29 +52,29 @@ nav {
 } */
 
 .logo img {
-    max-width: 5rem; /* Diminuir o tamanho do logo se necessário */
+    max-width: 5rem;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* Ajuste o espaçamento entre os itens conforme necessário */
+    gap: 1.5rem;
 }
 
 .link a {
-    color: var(--primary-text-color); /* Ajuste para usar variável de cor */
+    color: var(--primary-text-color);
     text-decoration: none;
-    padding: 0.25rem 0.75rem; /* Diminuir o padding para reduzir a altura dos links */
-    border-radius: 0.25rem; /* Adicione bordas arredondadas */
-    transition: background-color 0.3s, color 0.3s; /* Adicione transição para efeitos de hover */
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
     display: flex;
-    align-items: center; /* Centraliza verticalmente o texto */
+    align-items: center;
 }
 
 .link a:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Efeito de hover com cor de fundo */
-    color: var(--secondary-text-color); /* Mude a cor do texto no hover */
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-text-color);
 }
 
 
@@ -127,4 +127,3 @@ header img{
     width: 400px;
     height: auto;
 }
-

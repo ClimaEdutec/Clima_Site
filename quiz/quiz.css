@@ -1,17 +1,23 @@
 @font-face {
-    font-family: 'Brown Sugar';
-    src: url('/fonts/BrownSugar.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Barlow-Regular';
     src: url('/fonte/Barlow-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Brown Sugar';
+    src: url('/fonte/Brown-Sugar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root {
     --primary-text-color: rgba(0, 0, 0, 1);
@@ -25,12 +31,20 @@
     --purple: #9B59B6;
 }
 
-* {
+body {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
+    color: var(--primary-text-color);
     margin: 0;
-    padding: 0;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
+}
+
+body.escuro {
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
+    --color-mid1: #2B3D54;
+    --color-mid2: #2B3D54;
+    --color-end: #001228;
+    --color-endb: #173A59;
 }
 
 
@@ -97,55 +111,66 @@ header img {
     padding-left: 2rem;
 }
 
-body{
-    background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
-    color: var(--primary-text-color);
-    margin-top: 120px
-}
-
-
-#cima {
+main {
     display: flex;
     align-items: center;
-    gap: 10px;
-    justify-content:space-around 200px;
-    margin-bottom: 25px;
+    gap: 40px;
+    padding: 160px;
 }
 
-#cima img {
-    margin-left: 150px;
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-}
-
-#cima h1 {
-    font-size: 75px;
-    font-family: 'Brown Sugar';
-    margin-left: 200px;
-}
-
-#baixo {
+.intro {
+    text-align: center;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#p{
-    font-family: 'Barlow-Regular';
-    display: flex;
-    width: 50%;
     justify-content: center;
+    flex-direction: column;
 }
 
-#baixo p {
-    width: 500px;
+.intro h1 {
+    margin-bottom: 10px;
+    font-size: 120px;
+    text-align: center;
+    margin-right: 100px;
+    font-family: 'Brown Sugar', cursive;
+}
+
+.intro p {
+    margin: 20px;
     font-size: 31.5px;
     text-align: center;
+    margin-right: 50px;
+    font-family: 'Barlow-Regular';
 }
 
-#baixo img {
-    width: 420px;
+.clima img {
+    max-width: 20rem;
     height: auto;
+}
 
+.tema {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tema img {
+    width: 16px;
+}
+
+.tema button {
+    height: 20px;
+    width: 32px;
+    background: var(--purple);
+    border: 0;
+    border-radius: 999px;
+    padding: 4px;
+    display: flex;
+    cursor: pointer;
+}
+
+.tema button div {
+    background: var(--white);
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
 }

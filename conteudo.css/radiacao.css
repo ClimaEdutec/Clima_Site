@@ -37,55 +37,55 @@ body.escuro {
 
 nav {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
-    padding: 0.5rem 1rem; /* Diminuir o padding para reduzir a altura da barra */
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo img {
-    max-width: 5rem; /* Diminuir o tamanho do logo se necessário */
+    max-width: 5rem;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* Ajuste o espaçamento entre os itens conforme necessário */
+    gap: 1.5rem;
 }
 
 .link a {
-    color: var(--primary-text-color); /* Ajuste para usar variável de cor */
+    color: var(--primary-text-color);
     text-decoration: none;
-    padding: 0.25rem 0.75rem; /* Diminuir o padding para reduzir a altura dos links */
-    border-radius: 0.25rem; /* Adicione bordas arredondadas */
-    transition: background-color 0.3s, color 0.3s; /* Adicione transição para efeitos de hover */
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
     display: flex;
-    align-items: center; /* Centraliza verticalmente o texto */
+    align-items: center;
 }
 
 .link a:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Efeito de hover com cor de fundo */
-    color: var(--secondary-text-color); /* Mude a cor do texto no hover */
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-text-color);
 }
 
 .container {
     display: flex;
-    justify-content: space-between; /* Espaça os itens dentro do contêiner */
-    align-items: center; /* Alinha verticalmente os itens no centro */
-    padding: 2rem; /* Ajuste o padding conforme necessário */
-    text-align: center; /* Alinha o texto ao centro */
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
 }
 
 .conteúdo {
-    flex: 1; /* Faz com que o texto ocupe o espaço restante disponível */
-    max-width: 50%; /* Limita a largura do conteúdo textual */
-    margin-right: 2rem; /* Espaçamento à direita do texto para separar da imagem */
+    flex: 1;
+    max-width: 50%;
+    margin-right: 2rem;
 }
 
 .titulo {
     font-size: 70px;
-    margin-bottom: 1rem; /* Espaçamento abaixo do título */
+    margin-bottom: 1rem;
     font-family: Brown sugar;
 }
 
@@ -97,13 +97,13 @@ p {
 
 img {
     max-width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
+    height: auto;
 }
 
 .radiacaopng {
     border-radius: 5rem;
-    max-width: 30rem; /* Ajustar conforme necessário */
-    height: auto; /* Mantém a proporção da altura */
+    max-width: 30rem;
+    height: auto;
 }
 
 body{
@@ -114,17 +114,17 @@ body{
 /* Responsividade */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
-        align-items: center; /* Centraliza os itens no layout móvel */
+        flex-direction: column;
+        align-items: center;
     }
 
     .conteúdo {
-        max-width: 100%; /* Aumenta a largura do texto em telas menores */
-        text-align: center; /* Centraliza o texto em telas menores */
-        margin-right: 0; /* Remove o espaçamento à direita */
+        max-width: 100%;
+        text-align: center;
+        margin-right: 0;
     }
 
     .radiacaopng {
-        max-width: 100%; /* Ajusta a imagem para caber no contêiner em telas menores */
+        max-width: 100%;
     }
 }

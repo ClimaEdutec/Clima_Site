@@ -38,7 +38,7 @@ nav {
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espaça logo e links de navegação */
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     top: 0;
@@ -47,7 +47,7 @@ nav {
 
 .logo {
     display: flex;
-    align-items: center; /* Alinha verticalmente a logo */
+    align-items: center;
 }
 
 .logo img {
@@ -125,12 +125,11 @@ body {
 
 
 .topicos {
-    /*text-shadow: deslocamento-horizontal deslocamento-vertical desfoque-cor;*/
     color: white;
     margin-top: 12.5rem;
     display: flex;
     justify-content: space-around;
-    text-align: center; /* alinhamento do centro */
+    text-align: center;
 }
 
 .textos{
@@ -139,8 +138,8 @@ body {
 }
 
 .textos h1{
-    font-family: 'Brown Sugar'; /* fonte */
-    font-size: 3.125rem; /*  tamanho da fonte */
+    font-family: 'Brown Sugar';
+    font-size: 3.125rem;
     margin-bottom: 1.25rem; /* margem debaixo do H1 */
     text-align: center;
 }

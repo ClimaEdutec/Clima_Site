@@ -51,7 +51,7 @@ nav {
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espaça logo e links de navegação */
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     top: 0;
@@ -60,7 +60,7 @@ nav {
 
 .logo {
     display: flex;
-    align-items: center; /* Alinha verticalmente a logo */
+    align-items: center;
 }
 
 .logo img {
