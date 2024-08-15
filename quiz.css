@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: #FFFFFF;
+    --bg-whit: #FFFFFF;
+    --bg-gray: #B9C9DF;
+    --bg-light-cyan: #C1D0E2;
+    --bg-dark-gray: #7E9CC3;
+    --bg-dark-light:C7D1DE;
+    --true-green: ;
+    --false-red: ;
+}

@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'Brown Sugar';
+    src: url('/fonts/BrownSugar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
     box-sizing: border-box;
 }
 
@@ -11,6 +20,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 header img{
@@ -21,17 +31,62 @@ header img{
 }
 
 body {
-    margin-top: 100px;
-    background: linear-gradient(to left, #173A59, #71849D);
+    background: linear-gradient(to bottom, 
+    #3C4D5C 2%,   /* Cor vermelha no topo (0%) */
+    #70859D 41%,  /* Cor verde no meio (50%) */
+    #516845 64%,   /* Cor vermelha no topo (0%) */
+    #3F2B2B 90%  /* Cor azul na base (100%) */);
+
+    /*background: linear-gradient(to left, #173A59, #71849D);*/
 }
 
-h1 {
+
+.topicos {
+    /*text-shadow: deslocamento-horizontal deslocamento-vertical desfoque-cor;*/
+    text-shadow: 1px 1px gray;
+    color: white;
+    margin-top: 200px;
     display: flex;
-    margin-top: 100px;
+    justify-content: space-around;
+    text-align: center; /* alinhamento do centro */
 }
 
-.ZP {
-    display: flex;
-    padding: 10rem;
-    align-items: center;
+.textos{
+    padding-top: 25px;
+    justify-content: center;
 }
+
+.textos h1{
+    font-family: 'Brown Sugar'; /* fonte */
+    font-size: 50px; /*  tamanho da fonte */
+    margin-bottom: 20px; /* margem debaixo do H1 */
+    text-align: center;
+}
+
+.textos p{
+    /*font-family: 'Barlow-regular';  troca fonte */
+    font-size: 35px; /* tamanho da fonte */
+    max-width: 450px; /* Define a largura máxima do contêiner */
+}
+
+.imagens img {
+    height: auto; /* Mantém a proporção da imagem */
+    width: 500px;
+}
+
+#nuvem {
+    margin-bottom: -150px;
+    transform: translateX(-50%);
+    z-index: 500;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,62 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
     box-sizing: border-box;
+}
+
+header{
+    background: linear-gradient(to left, #96A9C2, #001228);
+    height: 5rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header img{
+    max-width:12rem;
+    max-height:80px;
+    display: flex;
+    padding-left: 1rem;
+}
+
+body {
+    margin-top: 100px;
+    background: linear-gradient(to left, #173A59, #71849D);
+}
+
+.navegacao {
+    display: flex;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.navegacao > a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajusta a altura do main para ocupar toda a viewport */
+    gap: 3rem; /* Espaço entre as seções */
+}
+
+.fatores,
+.elementos,
+.zonas {
+    width: 100%; /* Ajusta a largura dos elementos conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(7, 1, 86); /* Exemplo de fundo transparente */
+    border-radius: 10px; /* Cantos arredondados para estética */
 }

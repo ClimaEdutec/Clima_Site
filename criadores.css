@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+}
+
+header{
+    background: linear-gradient(to left, #96A9C2, #001228);
+    height: 5rem;
+    display: flex;
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+
+header img{
+    max-width:12rem;
+    max-height:80px;
+    display: flex;
+    padding-left: 1rem;
+}
+
+body{
+    margin-top: 100px;
+    background: linear-gradient(to left, #173A59, #71849D);
+}
+
+main h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+main section h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+main section p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 40px 40px;
+}
+
+.Criadores {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+.esq {
+    font-size: 30px;
+    display: flex;
+    padding-left: 50px;
+    flex-direction: column;
+}
+
+.dir {
+    font-size: 30px;
+    display: flex;
+    padding-left: 150px;
+    flex-direction: column;
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img {
+    display: flex;
+    padding-left: 140px;
+}
+
+p {
+    text-align: center;
+}

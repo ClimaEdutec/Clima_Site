@@ -8,6 +8,8 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
     box-sizing: border-box;
 }
 
@@ -30,16 +32,40 @@ header img{
 body{
     margin-top: 100px;
     background: linear-gradient(to left, #173A59, #71849D);/*fundo da pagina*/
-    
 }
 
-#cima{
-    gap: 100px;
+#cima {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
+    gap: 10px; /* Espaçamento entre a imagem e o título */
+    justify-content: space-around 200px;
 }
 
-#cima h1{
-    font-family: 'Brown Sugar', sans-serif;
-    color: #ffffff; /* Cor branca para o texto */
-    text-align: right; /* Centraliza o texto */
+#cima img {
+    margin-left: 150px;
+    width: 170px; /* Largura da imagem */
+    height: 170px; /* Altura da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
 }
 
+#cima h1 {
+    font-size: 75px; /* Ajusta o tamanho da fonte do título */
+    font-family: 'Brown Sugar';
+    margin-left: 250px;
+    color: white;
+}
+
+
+#baixo {
+
+}
+
+#texto{
+
+
+}
+
+#img{
+
+
+}
