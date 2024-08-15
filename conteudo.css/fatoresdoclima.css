@@ -38,7 +38,8 @@ body{
     display: flex;
     align-items: center; /* Alinha verticalmente no centro */
     gap: 10px; /* Espaçamento entre a imagem e o título */
-    justify-content: space-around 200px;
+    justify-content:space-around 200px;
+    margin-bottom: 35px;
 }
 
 #cima img {
@@ -51,21 +52,25 @@ body{
 #cima h1 {
     font-size: 75px; /* Ajusta o tamanho da fonte do título */
     font-family: 'Brown Sugar';
-    margin-left: 250px;
+    margin-left: 200px;
     color: white;
 }
 
 
 #baixo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
 }
 
-#texto{
-
-
+#baixo p {
+    width: 200px;
+    color: white;
 }
 
-#img{
-
+#baixo img {
+    width: 400px;
+    height: auto;
 
 }

@@ -58,5 +58,5 @@ main {
     align-items: center;
     padding: 1rem;
     background-color: rgb(7, 1, 86); /* Exemplo de fundo transparente */
-    border-radius: 10px; /* Cantos arredondados para estética */
+    border-radius: 0.625rem; /* Cantos arredondados para estética */
 }
