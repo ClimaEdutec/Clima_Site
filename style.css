@@ -1,71 +1,113 @@
 @font-face {
-    font-family: 'Brown Sugar';
+    font-family: 'Barlow-Regular';
     src: url('/fonte/Barlow-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Brown Sugar';
+    src: url('/fonts/BrownSugar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Brown Sugar', sans-serif;
 }
 
-
-:root{
+:root {
     --primary-text-color: rgba(0, 0, 0, 1);
     --secondary-text-color: #FFFFFF;
     --color-start: #FFFFFF;
     --color-mid1: #B9C9DF;
     --color-mid2: #C1D0E2;
     --color-end: #7E9CC3;
-    --color-endb: #C7D1DE
+    --color-endb: #C7D1DE;
     --white: #FFFFFF;
+    --purple: #9B59B6;
 }
 
-body{
+body {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
     color: var(--primary-text-color);
+    margin: 0;
 }
 
-body.escuro{
+body.escuro {
     --primary-text-color: #FFFFFF;
-    --secondary-text-color:  rgba(0, 0, 0, 1);
-    --color-start:  #96A9C2;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
     --color-mid1: #2B3D54;
     --color-mid2: #2B3D54;
     --color-end: #001228;
     --color-endb: #173A59;
 }
-header{
-    background: linear-gradient(to left, var(--color-start) 0%,var(--color-mid1) 43%,var(--color-mid2) 57%,var(--color-end) 100%);
+
+nav {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça logo e links de navegação */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo */
+}
+
+.logo img {
+    max-width: 5rem;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.link a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-text-color);
+}
+
+header {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-mid1) 43%, var(--color-mid2) 57%, var(--color-end) 100%);
     height: 5rem;
     display: flex;
+    align-items: center;
     position: fixed;
-    top: 0;
     width: 100%;
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-}
-
-nav a{
-    text-decoration: none;
-    color: var(--primary-text-color);
-    padding: 1.5rem;
-    margin-inline: 7.5rem;
-}
-
-header img{
-    max-width:12.5rem;
-    max-height:150px;
+header img {
+    max-width: 12.5rem;
+    max-height: 150px;
     width: auto;
     height: auto;
     display: flex;
     padding-right: 5rem;
+    padding-left: 2rem;
 }
 
 main {
@@ -75,9 +117,11 @@ main {
     padding: 160px;
 }
 
-
 .intro {
+    text-align: center;
+    display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .intro h1 {
@@ -85,6 +129,7 @@ main {
     font-size: 120px;
     text-align: center;
     margin-right: 100px;
+    font-family: 'Brown Sugar', cursive;
 }
 
 .intro p {
@@ -92,31 +137,36 @@ main {
     font-size: 31.5px;
     text-align: center;
     margin-right: 50px;
+    font-family: 'Barlow-Regular';
 }
 
 .clima img {
     max-width: 20rem;
     height: auto;
 }
-.tema{
+
+.tema {
     padding: 8px 0;
     display: flex;
     align-items: center;
     gap: 8px;
 }
+
 .tema img {
     width: 16px;
 }
+
 .tema button {
     height: 20px;
     width: 32px;
-    background: var(--puple);
+    background: var(--purple);
     border: 0;
     border-radius: 999px;
     padding: 4px;
     display: flex;
     cursor: pointer;
 }
+
 .tema button div {
     background: var(--white);
     width: 12px;
@@ -130,7 +180,7 @@ main {
     border-radius: 50px;
     color: white;
     font-size: 16px;
-    padding: 0.5px 10px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     outline: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -146,12 +196,12 @@ main {
     transform: scale(0.95);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-.theme-button img{
+
+.theme-button img {
     max-width: 15px;
-    max-height:15px;
+    max-height: 15px;
     width: auto;
     height: auto;
     display: flex;
     padding-right: 1px;
-
 }

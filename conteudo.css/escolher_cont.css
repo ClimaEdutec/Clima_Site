@@ -6,38 +6,168 @@
     box-sizing: border-box;
 }
 
-header{
-    background: linear-gradient(to left, #96A9C2, #001228);
-    height: 5rem;
-    display: flex;
-    position: fixed;
-    top: 0;
-    width: 100%;
+:root {
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: #FFFFFF;
+    --color-start: #FFFFFF;
+    --color-mid1: #B9C9DF;
+    --color-mid2: #C1D0E2;
+    --color-end: #7E9CC3;
+    --color-endb: #C7D1DE;
+    --white: #FFFFFF;
 }
 
-header img{
-    max-width:12rem;
-    max-height:80px;
+body.escuro {
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
+    --color-mid1: #2B3D54;
+    --color-mid2: #2B3D54;
+    --color-end: #001228;
+    --color-endb: #173A59;
+}
+
+.barra {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem;
     display: flex;
-    padding-left: 1rem;
+    align-items: center;
+    justify-content: space-between; /* Espaça logo e links de navegação */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    display: flex;
+    align-items: center;
+    max-width: 5rem; /* Diminuir o tamanho do logo se necessário */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Ajuste o espaçamento entre os itens conforme necessário */
+}
+
+.link a {
+    color: var(--primary-text-color); /* Ajuste para usar variável de cor */
+    text-decoration: none;
+    padding: 0.25rem 0.75rem; /* Diminuir o padding para reduzir a altura dos links */
+    border-radius: 0.25rem; /* Adicione bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Adicione transição para efeitos de hover */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto */
+    font-family: Barlow;
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efeito de hover com cor de fundo */
+    color: var(--secondary-text-color); /* Mude a cor do texto no hover */
 }
 
 body {
-    margin-top: 100px;
-    background: linear-gradient(to left, #173A59, #71849D);
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
+    color: var(--primary-text-color);
+    font-size: 16px; /* Define um tamanho base para a fonte */
 }
 
-.navegacao {
+header {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-mid1) 43%, var(--color-mid2) 57%, var(--color-end) 100%);
+    height: 5rem;
     display: flex;
-    padding: 1.5rem;
-    justify-content: center;
     align-items: center;
-    gap: 10rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 1rem; /* Adiciona padding lateral ao header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destacar o header */
+    z-index: 1000; /* Garante que o header esteja acima de outros conteúdos */
+
 }
 
-.navegacao > a {
+nav {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça logo e links de navegação */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo */
+}
+
+.logo img {
+    max-width: 5rem;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.link a {
+    color: var(--primary-text-color);
     text-decoration: none;
-    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-text-color);
+}
+
+header {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-mid1) 43%, var(--color-mid2) 57%, var(--color-end) 100%);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+header img {
+    max-width: 12.5rem;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    display: flex;
+    padding-right: 5rem;
+    padding-left: 2rem;
+}
+
+.solzasso {
+    display: flex;
+    height: auto;
+    max-width: 10rem;
+    margin-top: 20px;
+}
+
+.elementoss {
+    display: flex;
+    height: auto;
+    max-width: 10rem;
+}
+
+.zonclima {
+    display: flex;
+    height: 100px;
+    max-width: 100px;
 }
 
 main {
@@ -45,18 +175,46 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Ajusta a altura do main para ocupar toda a viewport */
+    min-height: 100vh; /* Garante que o main ocupe pelo menos a altura da viewport */
+    padding: 2rem; /* Adiciona padding ao main */
     gap: 3rem; /* Espaço entre as seções */
 }
 
 .fatores,
 .elementos,
 .zonas {
-    width: 100%; /* Ajusta a largura dos elementos conforme necessário */
+    width: 100%;
+    max-width: 1200px; /* Define uma largura máxima para maior controle de layout */
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Garante que o conteúdo seja exibido em coluna */
     align-items: center;
     padding: 1rem;
-    background-color: rgb(7, 1, 86); /* Exemplo de fundo transparente */
+    background-color: rgb(7, 1, 86); /* Ajusta a cor de fundo */
     border-radius: 0.625rem; /* Cantos arredondados para estética */
+    color: var(--white); /* Define a cor do texto para contraste */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destaque */
+    text-align: center; /* Centraliza o texto dentro das seções */
+    margin-top: 80px;
+}
+
+.fatores a,
+.elementos a,
+.zonas a {
+    text-decoration: none;
+    color: var(--white); /* Garante que o texto dos links seja branco */
+}
+
+.fatores h2,
+.elementos h2,
+.zonas h2 {
+    margin: 0; /* Remove a margem padrão dos headings */
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte dos headings */
+    text-transform: uppercase; /* Adiciona um estilo de texto maiúsculo */
+}
+
+.fatores img,
+.elementos img,
+.zonas img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
 }

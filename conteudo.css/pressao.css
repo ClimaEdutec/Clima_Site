@@ -1,7 +1,134 @@
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('/fonte/Barlow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     outline: none;
     border: none;
     box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: #FFFFFF;
+    --color-start: #FFFFFF;
+    --color-mid1: #B9C9DF;
+    --color-mid2: #C1D0E2;
+    --color-end: #7E9CC3;
+    --color-endb: #C7D1DE;
+    --white: #FFFFFF;
+}
+
+body.escuro {
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
+    --color-mid1: #2B3D54;
+    --color-mid2: #2B3D54;
+    --color-end: #001228;
+    --color-endb: #173A59;
+}
+
+body{
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
+    color: var(--primary-text-color);
+}
+
+nav {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem; /* Diminuir o padding para reduzir a altura da barra */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 5rem; /* Diminuir o tamanho do logo se necessário */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Ajuste o espaçamento entre os itens conforme necessário */
+}
+
+.link a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem; /* Diminuir o padding para reduzir a altura dos links */
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-text-color);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens dentro do contêiner */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    padding: 2rem;
+}
+
+.conteúdo {
+    flex: 1; /* Faz com que o texto ocupe o espaço restante disponível */
+    max-width: 50%; /* Limita a largura do conteúdo textual */
+    margin-right: 2rem; /* Espaçamento à direita do texto para separar da imagem */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 5rem; /* Ajuste o tamanho do título */
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5rem;
+    font-family: 'Brown Sugar', cursive; /* Ajuste a fonte conforme necessário */
+}
+
+p {
+    font-family: 'Barlow-Regular';
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.pressao-img {
+    border-radius: 5rem;
+    max-width: 30rem; /* Ajustar conforme necessário */
+    height: auto; /* Mantém a proporção da altura */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens no layout móvel */
+    }
+
+    .conteúdo {
+        max-width: 100%; /* Aumenta a largura do texto em telas menores */
+        text-align: center; /* Centraliza o texto em telas menores */
+        margin-right: 0; /* Remove o espaçamento à direita */
+    }
+
+    .pressao-img {
+        max-width: 100%; /* Ajusta a imagem para caber no contêiner em telas menores */
+    }
 }

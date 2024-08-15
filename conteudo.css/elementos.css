@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('/fonte/Barlow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +14,74 @@
     box-sizing: border-box;
 }
 
-header{
+:root {
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: #FFFFFF;
+    --color-start: #FFFFFF;
+    --color-mid1: #B9C9DF;
+    --color-mid2: #C1D0E2;
+    --color-end: #7E9CC3;
+    --color-endb: #C7D1DE;
+    --white: #FFFFFF;
+}
+
+body.escuro {
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
+    --color-mid1: #2B3D54;
+    --color-mid2: #2B3D54;
+    --color-end: #001228;
+    --color-endb: #173A59;
+}
+
+.barra {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem; /* Diminuir o padding para reduzir a altura da barra */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 5rem; /* Diminuir o tamanho do logo se necessário */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Ajuste o espaçamento entre os itens conforme necessário */
+}
+
+.link a {
+    color: var(--primary-text-color); /* Ajuste para usar variável de cor */
+    text-decoration: none;
+    padding: 0.25rem 0.75rem; /* Diminuir o padding para reduzir a altura dos links */
+    border-radius: 0.25rem; /* Adicione bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Adicione transição para efeitos de hover */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto */
+    font-family: Barlow;
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efeito de hover com cor de fundo */
+    color: var(--secondary-text-color); /* Mude a cor do texto no hover */
+}
+
+body {
+    
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
+    color: black;
+    font-size: 16px; /* Define um tamanho base para a fonte */
+}
+
+header {
     background: linear-gradient(to left, #96A9C2, #001228);
     height: 5rem;
     display: flex;
     position: fixed;
-    top: 0;
     width: 100%;
 }
 
@@ -22,19 +92,15 @@ header img{
     padding-left: 1rem;
 }
 
-body {
-    margin-top: 100px;
-    background: linear-gradient(to left, #173A59, #71849D);
-}
 
 h1 {
     font-size: 70px;
-    color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 170px;
+    font-family: Brown sugar;
 }
 
 p {
@@ -43,7 +109,9 @@ p {
     padding-right: 10rem;
     flex-direction: column;
     font-size: 33px;
-    color: white;
+    font-family: 'Barlow-Regular';
+    justify-content: center;
+    text-align: center;
 }
 
 nav p {
@@ -87,5 +155,5 @@ section nav a {
 }
 
 .button:hover {
-    background-color: #510499;  /* ALTERAR A COR TA MUITO FEIO */
+    background-color: #7495c0;  /* ALTERAR A COR TA MUITO FEIO */
 }

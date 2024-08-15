@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'Brown Sugar';
+    src: url('/fonts/BrownSugar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('/fonte/Barlow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: #FFFFFF;
+    --color-start: #FFFFFF;
+    --color-mid1: #B9C9DF;
+    --color-mid2: #C1D0E2;
+    --color-end: #7E9CC3;
+    --color-endb: #C7D1DE;
+    --white: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,3 +29,102 @@
     border: none;
     box-sizing: border-box;
 }
+
+body{
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
+    color: var(--primary-text-color);
+}
+
+nav {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem; /* Diminuir o padding para reduzir a altura da barra */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*nav {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem; /* Diminuir o padding para reduzir a altura da barra 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.logo img {
+    max-width: 5rem; /* Diminuir o tamanho do logo se necessário */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Ajuste o espaçamento entre os itens conforme necessário */
+}
+
+.link a {
+    color: var(--primary-text-color); /* Ajuste para usar variável de cor */
+    text-decoration: none;
+    padding: 0.25rem 0.75rem; /* Diminuir o padding para reduzir a altura dos links */
+    border-radius: 0.25rem; /* Adicione bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Adicione transição para efeitos de hover */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto */
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efeito de hover com cor de fundo */
+    color: var(--secondary-text-color); /* Mude a cor do texto no hover */
+}
+
+
+header{
+    background: linear-gradient(to left, #96A9C2, #001228);
+    height: rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header img{
+    max-width:12rem;
+    max-height:80px;
+    display: flex;
+    padding-left: 1rem;
+}
+
+#tudo {
+    margin-top: 40px;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-between;
+}
+
+#esquerda{
+    text-align: center;
+    width: 45%;
+}
+
+#esquerda h1{
+    font-size: 80px;
+    font-family: 'Brown Sugar';
+}
+
+#esquerda p{
+    margin-top: 35px;
+    font-size: 25px;
+    font-family: 'Barlow-Regular';
+}
+
+#direita{
+    padding-top: 50px;
+    width: 45%
+}
+
+#direita img{
+    width: 400px;
+    height: auto;
+}
+

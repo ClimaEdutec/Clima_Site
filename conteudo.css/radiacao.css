@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('/fonte/Barlow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,21 +14,21 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --primary-text-color: rgba(0, 0, 0, 1);
     --secondary-text-color: #FFFFFF;
     --color-start: #FFFFFF;
     --color-mid1: #B9C9DF;
     --color-mid2: #C1D0E2;
     --color-end: #7E9CC3;
-    --color-endb: #C7D1DE
+    --color-endb: #C7D1DE;
     --white: #FFFFFF;
 }
 
-body.escuro{
+body.escuro {
     --primary-text-color: #FFFFFF;
-    --secondary-text-color:  rgba(0, 0, 0, 1);
-    --color-start:  #96A9C2;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
     --color-mid1: #2B3D54;
     --color-mid2: #2B3D54;
     --color-end: #001228;
@@ -29,45 +37,94 @@ body.escuro{
 
 nav {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
-    max-width: auto;
-    padding: 1rem; /* Ajuste conforme necessário */
+    padding: 0.5rem 1rem; /* Diminuir o padding para reduzir a altura da barra */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+}
+
+.logo img {
+    max-width: 5rem; /* Diminuir o tamanho do logo se necessário */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 1.5rem; /* Ajuste o espaçamento entre os itens conforme necessário */
 }
 
 .link a {
-    position: relative;
-    padding-bottom: 0.75rem;
-    padding-right: 10rem;
-    color: black;
+    color: var(--primary-text-color); /* Ajuste para usar variável de cor */
     text-decoration: none;
+    padding: 0.25rem 0.75rem; /* Diminuir o padding para reduzir a altura dos links */
+    border-radius: 0.25rem; /* Adicione bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Adicione transição para efeitos de hover */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto */
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efeito de hover com cor de fundo */
+    color: var(--secondary-text-color); /* Mude a cor do texto no hover */
 }
 
 .container {
-    max-width: 75rem;
-    margin: auto;
-    padding: 5rem;
+    display: flex;
+    justify-content: space-between; /* Espaça os itens dentro do contêiner */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    padding: 2rem; /* Ajuste o padding conforme necessário */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.conteúdo {
+    flex: 1; /* Faz com que o texto ocupe o espaço restante disponível */
+    max-width: 50%; /* Limita a largura do conteúdo textual */
+    margin-right: 2rem; /* Espaçamento à direita do texto para separar da imagem */
+}
+
+.titulo {
+    font-size: 70px;
+    margin-bottom: 1rem; /* Espaçamento abaixo do título */
+    font-family: Brown sugar;
+}
+
+p {
+    margin-bottom: 20px;
+    font-family: 'Barlow-Regular';
+    font-size: 31.5px;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
 }
-
-.logo img {
-    max-width: 6.25rem;
-}
-
-
 
 .radiacaopng {
     border-radius: 5rem;
+    max-width: 30rem; /* Ajustar conforme necessário */
+    height: auto; /* Mantém a proporção da altura */
+}
+
+body{
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
+    color: black;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens no layout móvel */
+    }
+
+    .conteúdo {
+        max-width: 100%; /* Aumenta a largura do texto em telas menores */
+        text-align: center; /* Centraliza o texto em telas menores */
+        margin-right: 0; /* Remove o espaçamento à direita */
+    }
+
+    .radiacaopng {
+        max-width: 100%; /* Ajusta a imagem para caber no contêiner em telas menores */
+    }
 }

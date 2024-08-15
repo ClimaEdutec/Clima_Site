@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -5,30 +6,90 @@
     border: none;
     text-decoration: none;
     box-sizing: border-box;
-    color: white;
+    color: black;
 }
 
-header{
-    background: linear-gradient(to left, #96A9C2, #001228);
+/* Variáveis de cor */
+:root {
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: #FFFFFF;
+    --color-start: #FFFFFF;
+    --color-mid1: #B9C9DF;
+    --color-mid2: #C1D0E2;
+    --color-end: #7E9CC3;
+    --color-endb: #C7D1DE;
+    --white: #FFFFFF;
+    --purple: #9B59B6;
+}
+
+/* Estilo do corpo */
+body {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
+    color: var(--primary-text-color);
+    margin: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-mid1) 43%, var(--color-mid2) 57%, var(--color-end) 100%);
     height: 5rem;
     display: flex;
-    top: 0;
-    width: 100%;
+    align-items: center;
     position: fixed;
+    width: 100%;
 }
 
-header img{
-    max-width:12rem;
-    max-height:80px;
+header img {
+    max-width: 12.5rem;
+    max-height: 150px;
+    width: auto;
+    height: auto;
     display: flex;
-    padding-left: 1rem;
+    padding-right: 5rem;
+    padding-left: 2rem;
 }
 
-body{
-    margin-top: 100px;
-    background: linear-gradient(to left, #173A59, #71849D);
+/* Estilo da barra de navegação */
+nav {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça logo e links de navegação */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
+.logo img {
+    max-width: 5rem;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links .link a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links .link a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-text-color);
+}
+
+/* Estilo dos títulos no main */
 main h2 {
     display: flex;
     justify-content: center;
@@ -38,56 +99,45 @@ main h2 {
     margin-top: 30px;
 }
 
-main section h2 {
+main section h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
     margin-bottom: 50px;
-    margin-top: 50px;
 }
 
+/* Estilo dos parágrafos */
 main section p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    padding: 40px 40px;
+    text-align: center;
+    font-size: 20px; /* Ajuste o tamanho da fonte se necessário */
+    padding: 40px 20px; /* Ajuste o padding se necessário */
 }
 
+.explicacao{
+    margin-top: 140px;
+}
+
+/* Estilo da seção Criadores */
 .Criadores {
-    margin-top: 150px;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    }
+}
 
-.esq {
-    font-size: 30px;
+.esq, .dir {
+    font-size: 20px; /* Ajuste o tamanho da fonte se necessário */
     display: flex;
-    padding-left: 50px;
     flex-direction: column;
+    padding: 0 20px; /* Ajuste o padding se necessário */
 }
 
-.dir {
-    font-size: 30px;
-    display: flex;
-    padding-left: 150px;
-    flex-direction: column;
-}
-
-section div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Estilo das imagens na seção Criadores */
 section img {
-    display: flex;
-    padding-left: 140px;
-}
-
-p {
-    text-align: center;
+    margin: 0 20px; /* Ajuste a margem se necessário */
 }
