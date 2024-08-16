@@ -162,3 +162,7 @@ section nav a {
 .button:hover {
     background-color: #7495c0;
 }
+
+main{
+    margin-top: 100px;
+}

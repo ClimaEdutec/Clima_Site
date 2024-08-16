@@ -106,6 +106,7 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: 350px;
     justify-content:space-around 200px;
     margin-bottom: 25px;
 }
@@ -131,6 +132,7 @@ body{
 
 #p{
     font-family: 'Barlow-Regular';
+    margin-left: 150px;
     display: flex;
     width: 50%;
     justify-content: center;
@@ -143,7 +145,7 @@ body{
 }
 
 #baixo img {
-    width: 420px;
+    width: 600px;
+    margin-right: 200px;
     height: auto;
-
 }
