@@ -114,11 +114,8 @@ header img{
 }*/
 
 body {
-    background: linear-gradient(to bottom,
-    #3C4D5C 2%,   /* Cor vermelha no topo (0%) */
-    #70859D 41%,  /* Cor verde no meio (50%) */
-    #516845 64%,   /* Cor vermelha no topo (0%) */
-    #3F2B2B 90%  /* Cor azul na base (100%) */);
+    background: linear-gradient(to bottom, #BBB3B3 8%, #96AEDB 33%, #A7C08D 63%, #EAD5D5 89%);
+
 
 }
 

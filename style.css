@@ -85,6 +85,7 @@ nav {
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     align-items: center;
+    font-family: Barlow;
 }
 
 .link a:hover {
