@@ -122,7 +122,8 @@ body {
 /*background: linear-gradient(to left, #173A59, #71849D);*/
 
 .topicos {
-    color: white;
+    font-family: 'Barlow-Regular';
+    color: black;
     margin-top: 12.5rem;
     display: flex;
     justify-content: space-around;
