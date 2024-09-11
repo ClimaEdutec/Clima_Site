@@ -1,0 +1,97 @@
+{
+    "quizzes": [
+        {
+            "title": "FatoresClimaticos",
+            "questions": [
+                {
+                    "question": "Quais são os três principais fatores que influenciam o clima de uma região?",
+                    "options": [
+                        "Latitude, altitude e proximidade do mar",
+                        "Temperatura, umidade e vento",
+                        "Pressão atmosférica, radiação solar e precipitação",
+                        "Velocidade do vento, pressão do ar e cobertura do solo"
+                    ],
+                    "answer": "Latitude, altitude e proximidade do mar"
+                },
+                {
+                    "question": "Como a latitude afeta a temperatura e a precipitação?",
+                    "options": [
+                        "Aumenta a temperatura e a precipitação",
+                        "Diminui a temperatura e a precipitação",
+                        "Aumenta a temperatura e diminui a precipitação",
+                        "Diminui a temperatura e aumenta a precipitação"
+                    ],
+                    "answer": "Diminui a temperatura e aumenta a precipitação"
+                },
+                {
+                    "question": "Qual instrumento de medição está associado às seguintes unidades?",
+                    "options": [
+                        "Termômetro; graus Celsius e Fahrenheit",
+                        "Barômetro; milibares e polegadas de mercúrio",
+                        "Anemômetro; quilômetros por hora e nós",
+                        "Higrômetro; porcentagem e gramas por metro cúbico"
+                    ],
+                    "answer": "Termômetro; graus Celsius e Fahrenheit"
+                },
+                {
+                    "question": "Qual zona climática é caracterizada por temperaturas quentes o ano todo e chuvas?",
+                    "options": [
+                        "Equatorial",
+                        "Tropical",
+                        "Temperada",
+                        "Polar"
+                    ],
+                    "answer": "Equatorial"
+                },
+                {
+                    "question": "Em qual zona climática os verões são quentes e secos, enquanto os invernos são frios e úmidos?",
+                    "options": [
+                        "Mediterrânea",
+                        "Continental",
+                        "Subpolar"
+                    ],
+                    "answer": "Continental"
+                },
+                {
+                    "question": "Qual zona climática tem invernos longos e frios e verões curtos e amenos?",
+                    "options": [
+                        "Temperada",
+                        "Subpolar",
+                        "Polar",
+                        "Tropical"
+                    ],
+                    "answer": "Polar"
+                },
+                {
+                    "question": "Qual elemento do clima é a quantidade de vapor de água no ar?",
+                    "options": [
+                        "Umidade",
+                        "Temperatura",
+                        "Precipitação"
+                    ],
+                    "answer": "Umidade"
+                },
+                {
+                    "question": "Qual elemento do clima mede a velocidade do movimento do ar?",
+                    "options": [
+                        "Vento",
+                        "Precipitação",
+                        "Temperatura",
+                        "Umidade"
+                    ],
+                    "answer": "Vento"
+                },
+                {
+                    "question": "Qual elemento do clima se refere à forma como a luz solar atinge a superfície da Terra?",
+                    "options": [
+                        "Radiação solar",
+                        "Temperatura",
+                        "Umidade",
+                        "Vento"
+                    ],
+                    "answer": "Radiação solar"
+                }
+            ]
+        }
+    ]
+}

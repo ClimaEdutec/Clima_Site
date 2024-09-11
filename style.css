@@ -13,6 +13,7 @@
 }
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -35,6 +36,8 @@ body {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
     color: var(--primary-text-color);
     margin: 0;
+    transition: background-color 1s linear, color 1s linear;
+    /* Transição suave para o background e a cor */
 }
 
 body.escuro {
@@ -147,63 +150,62 @@ main {
     height: auto;
 }
 
-.tema {
-    padding: 8px 0;
+
+
+
+
+footer{
     display: flex;
-    align-items: center;
-    gap: 8px;
+    justify-content: center;
 }
 
-.tema img {
-    width: 16px;
+.checkbox{
+    opacity: 0; /* define que não terá opacidade */
+    position: absolute; /* poe no meio para sempre ser acionado ao clicar */
 }
 
-.tema button {
-    height: 20px;
-    width: 32px;
-    background: var(--purple);
-    border: 0;
-    border-radius: 999px;
-    padding: 4px;
+.label{
+    color: rgb(0, 0, 0);
     display: flex;
-    cursor: pointer;
+    align-items: center; /* alinha verticalmente */
+    justify-content: space-between; /* alinha horizontal */
+
+    background-color: #5DFB9C; /* cor de fundo do botão */
+    border-radius: 50px; /* faz ficar redondinho */
+    cursor: pointer; /* com o mouse em cima ficar pointer */
+    padding: 5px; /* faz ter um espaço maior para n ficar apertado */
+    width: 50px; /* largura */
+
+
+
+    position: relative; /* testar se precisa */
+    height: 26px; /* testar se precisa */
+
+
+    transform: scale(1.5);
+
 }
 
-.tema button div {
-    background: var(--white);
-    width: 12px;
-    height: 12px;
-    border-radius: 999px;
+.label .ball { /* bolinha que se meche quando clica */
+    background-color: #fff; /* cor da bolinha */
+    border-radius: 50%; /* tamanho da bolinha */
+    position: absolute; /* pra ficar sempre ali */
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px); /* começa sempre na esquerda */
+    transition: transform 0.2s linear; /* transição suave pro outro lado */
+
 }
 
-.theme-button {
-    background: linear-gradient(135deg, #066AFF, #6790C5);
-    border: none;
-    border-radius: 50px;
-    color: white;
-    font-size: 16px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    outline: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+/* quando o checkbox for acionado,
+ele fará a bola do label ir para a direita*/
+.checkbox:checked + .label .ball { 
+    transform: translateX(24px)
 }
 
-.theme-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
 
-.theme-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.theme-button img {
-    max-width: 15px;
-    max-height: 15px;
-    width: auto;
-    height: auto;
-    display: flex;
-    padding-right: 1px;
-}

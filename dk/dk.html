@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dk/dk.css">
+    <script src="../dk/dk.js" defer></script>
+    <title>Quiz</title>
+</head>
+<body class="">
+    <nav>
+        <header>
+            <div class='logo'>
+                <a href="../index.html">
+                    <img src="../imgs/logo.png" alt="logo">
+                </a>
+            </div>
+            <ul class="links">
+                <li class="link"><a href="../index.html">Conteudo</a></li>
+                <li class="link"><a href="../criadores.html">Sobre</a></li>
+                <li class="link"><a href="../quiz/quiz.html">Quiz</a></li>
+            </ul>
+            </div>
+        </header>
+    </nav>
+    <main>
+        <input type="hidden" class="perguntasRespondidas" value="2">
+        <button class="button">X</button>
+        <div class="sobreposicao"></div>
+    <!-- <div class="dialogo">
+            <div class="mensagem">
+                <p>Tem certeza que deseja sair?</p>
+                <p>você ira perde seu progresso!</p>
+            </div>
+            <div class="resposta">
+                <p>2/10</p>
+            </div>
+            <div class="buttons">
+                <button class="cancelar">Cancelar</button>
+                <button class="confirma">Confirmar</button>
+            </div>
+        </div>-->
+        <section class="pergunta">
+            <h2>Como a latitude afeta a temperatura e a precipitação?</h2>
+        </section>
+        <section class="alternativas">
+            <form action="">
+                <label for="alternativa_a" id="correta">
+                    <input type="radio" id="alternativa_a" name="alternativa">
+                    <div>
+                        <span>A.</span>
+                        Aumenta a temperatura e a precipitação
+                    </div>
+                </label>
+
+                <label for="alternativa_b" id="errada">
+                    <input type="radio" id="alternativa_b" name="alternativa">
+                    <div>
+                        <span>B.</span>
+                        Diminui a temperatura e a precipitaçã
+                    </div>
+                </label>
+
+                <label for="alternativa_c">
+                    <input type="radio" id="alternativa_c" name="alternativa">
+                    <div>
+                        <span>C.</span>
+                        Aumenta a temperatura e diminui a precipitação
+                    </div>
+                </label>
+
+                <label for="alternativa_d">
+                    <input type="radio" id="alternativa_d" name="alternativa">
+                    <div>
+                        <span>D.</span>
+                        Diminui a temperatura e aumenta a precipitação
+                    </div>
+                </label>
+            </form>
+            <button>Enviar</button>
+            <p>2/10</p>
+        </section>
+    </main>
+</body>
+</html>

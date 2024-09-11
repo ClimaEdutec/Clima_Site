@@ -44,6 +44,10 @@ nav {
     z-index: 1000;
 }
 
+a{
+    text-decoration: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -100,11 +104,11 @@ body {
     display: flex;
     justify-content: center;
     padding: 0;
-    height: 100vh; 
+    height: 100vh;
     background-image: url('/imgs/fundo\ quiz.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
     color: var(--primary-text-color);
 }
