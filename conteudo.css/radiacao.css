@@ -74,18 +74,11 @@ nav {
     color: var(--secondary-text-color);
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-}
+
 
 .conteúdo {
     flex: 1;
     max-width: 50%;
-    margin-right: 2rem;
 }
 
 .titulo {
@@ -107,14 +100,35 @@ img {
 
 .radiacaopng {
     border-radius: 5rem;
-    max-width: 30rem;
+    max-width: 35rem;
     height: auto;
 }
 
 body{
+
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
     color: black;
 }
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    color: var(--primary-text-color);
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+
+
+
 
 /* Responsividade */
 @media (max-width: 768px) {

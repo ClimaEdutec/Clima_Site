@@ -12,6 +12,8 @@
     font-style: normal;
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +33,10 @@
     --white: #FFFFFF;
 }
 
+
+
+
+
 body.escuro {
     --primary-text-color: #FFFFFF;
     --secondary-text-color: rgba(0, 0, 0, 1);
@@ -41,62 +47,17 @@ body.escuro {
     --color-endb: #173A59;
 }
 
-.barra {
-    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img {
-    max-width: 5rem;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.link a {
-    color: var(--primary-text-color);
-    text-decoration: none;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s, color 0.3s;
-    align-items: center;
-    font-family: Barlow;
-}
-
-.link a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: var(--secondary-text-color);
-}
 
 body {
-
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
-    color: black;
+    color: var(--primary-text-color);
     font-size: 16px;
 }
 
-header {
-    background: linear-gradient(to left, #96A9C2, #001228);
-    height: 5rem;
-    display: flex;
-    position: fixed;
-    width: 100%;
-}
 
-header img{
-    max-width:12rem;
-    max-height:80px;
-    display: flex;
-    padding-left: 1rem;
+main{
+    margin-top: 200px;
 }
-
 
 h1 {
     font-size: 70px;
@@ -141,6 +102,7 @@ section nav div {
 
 section nav a {
     text-decoration: none;
+    font-family: Barlow-Regular;
     color: rgb(255, 255, 255);
 }
 
@@ -161,8 +123,4 @@ section nav a {
 
 .button:hover {
     background-color: #7495c0;
-}
-
-main{
-    margin-top: 100px;
 }

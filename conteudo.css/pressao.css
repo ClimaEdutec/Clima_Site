@@ -41,6 +41,11 @@ body.escuro {
     --color-endb: #173A59;
 }
 
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+
 body{
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
     color: var(--primary-text-color);
@@ -82,9 +87,11 @@ nav {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+
 }
 
 .conteúdo {
@@ -110,18 +117,25 @@ p {
     margin-bottom: 30px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 .pressao-img {
     border-radius: 5rem;
     max-width: 30rem;
     height: auto;
+    
 }
 
-/* Responsividade */
+
+
+
+
+
+
+
+
+
+/* Responsividade  oxe*/
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

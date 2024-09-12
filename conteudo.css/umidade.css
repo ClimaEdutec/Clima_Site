@@ -107,18 +107,11 @@ header img{
 }
 
 body{
-    margin-top: 100px;
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
     color: var(--primary-text-color);
 }
 
-#tudo {
-    margin-top: 150px;
-    display: flex;
-    padding-left: 5%;
-    padding-right: 5%;
-    justify-content: space-between;
-}
+
 
 #esquerda{
     text-align: center;
@@ -134,16 +127,40 @@ body{
 #esquerda p{
     margin-top: 35px;
     font-size: 25px;
+    
     font-family: 'Barlow-Regular';
 }
 
-#direita{
-    padding-top: 50px;
-    width: 45%;
-
-}
 
 #direita img{
-    width: 400px;
+    width: 450px;
     height: auto;
+    
 }
+
+
+body,html{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#tudo {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    top: 6%;
+    height: 85%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    top: 6%;
+    height: 85%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+

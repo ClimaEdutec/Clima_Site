@@ -24,6 +24,8 @@
     --purple: #9B59B6;
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -109,14 +111,10 @@ body{
 #cima {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-left: 350px;
-    justify-content:space-around 200px;
-    margin-bottom: 25px;
+    justify-content: space-evenly;
 }
 
 #cima img {
-    margin-left: 150px;
     width: 170px;
     height: 170px;
     object-fit: cover;
@@ -125,18 +123,16 @@ body{
 #cima h1 {
     font-size: 75px;
     font-family: 'Brown Sugar';
-    margin-left: 200px;
+    
 }
 
 #baixo {
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
 #p{
     font-family: 'Barlow-Regular';
-    margin-left: 150px;
     display: flex;
     width: 50%;
     justify-content: center;
@@ -150,6 +146,9 @@ body{
 
 #baixo img {
     width: 600px;
-    margin-right: 200px;
     height: auto;
 }
+
+
+
+

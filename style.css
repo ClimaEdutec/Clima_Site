@@ -32,11 +32,13 @@
     --purple: #9B59B6;
 }
 
-body {
+body, html {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
     color: var(--primary-text-color);
     margin: 0;
-    transition: background-color 1s linear, color 1s linear;
+    width: 100vw;
+    height: 100vh;
+    transition: background-color 1s linear, color s linear;
     /* Transição suave para o background e a cor */
 }
 
@@ -88,7 +90,8 @@ nav {
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     align-items: center;
-    font-family: Barlow;
+    font-size: 18px;
+    font-family: Barlow-Regular;
 }
 
 .link a:hover {
@@ -96,52 +99,42 @@ nav {
     color: var(--secondary-text-color);
 }
 
-header {
-    background: linear-gradient(to left, var(--color-start) 0%, var(--color-mid1) 43%, var(--color-mid2) 57%, var(--color-end) 100%);
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-}
-
-header img {
-    max-width: 12.5rem;
-    max-height: 150px;
-    width: auto;
-    height: auto;
-    display: flex;
-    padding-right: 5rem;
-    padding-left: 2rem;
-}
 
 main {
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 160px;
+    justify-content: space-around;
+    width: 100%;
+    height: 90%;
+    /* gap: 40px;*/
+    /*padding: 160px;*/
 }
 
 .intro {
+    width: 40%;
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
+.clima{
+    /*width: 40%;*/
+    margin: 15px;
+}
+
+
+
 .intro h1 {
     margin-bottom: 10px;
     font-size: 120px;
     text-align: center;
-    margin-right: 100px;
     font-family: 'Brown Sugar', cursive;
 }
 
 .intro p {
-    margin: 20px;
     font-size: 31.5px;
     text-align: center;
-    margin-right: 50px;
     font-family: 'Barlow-Regular';
 }
 
@@ -156,7 +149,11 @@ main {
 
 footer{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 2%;
+    padding-bottom: 0%;
+    height: 10%;
+    align-items: center;
 }
 
 .checkbox{

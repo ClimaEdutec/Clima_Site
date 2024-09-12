@@ -32,6 +32,16 @@
     --purple: #9B59B6;
 }
 
+body.escuro {
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
+    --color-mid1: #2B3D54;
+    --color-mid2: #2B3D54;
+    --color-end: #001228;
+    --color-endb: #173A59;
+}
+
 nav {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
     padding: 0.5rem 1rem;
@@ -115,15 +125,17 @@ header img{
 
 body {
     background: linear-gradient(to bottom, #BBB3B3 8%, #96AEDB 33%, #A7C08D 63%, #EAD5D5 89%);
+}
 
-
+body.escuro{
+    background: linear-gradient(to bottom, #3C4D5C 2%, #70859D 41%, #516845 64%, #3F2B2B 90%);
 }
 
 /*background: linear-gradient(to left, #173A59, #71849D);*/
 
 .topicos {
     font-family: 'Barlow-Regular';
-    color: black;
+    color: var(--primary-text-color);
     margin-top: 12.5rem;
     display: flex;
     justify-content: space-around;
@@ -156,4 +168,8 @@ body {
     margin-bottom: -9.375rem;
     transform: translateX(-50%);
     z-index: 500;
+}
+
+.ttt{
+    padding-top: 1.5rem;
 }

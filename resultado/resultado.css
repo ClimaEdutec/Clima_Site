@@ -1,42 +1,151 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
     box-sizing: border-box;
-    font-family: "Rubik", sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
-body {
+:root {
+    --primary-text-color: rgba(0, 0, 0, 1);
+    --secondary-text-color: #FFFFFF;
+    --color-start: #FFFFFF;
+    --color-mid1: #B9C9DF;
+    --color-mid2: #C1D0E2;
+    --color-end: #7E9CC3;
+    --color-endb: #C7D1DE;
+    --white: #FFFFFF;
+}
+
+body.escuro {
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
+    --color-mid1: #2B3D54;
+    --color-mid2: #2B3D54;
+    --color-end: #001228;
+    --color-endb: #173A59;
+}
+
+body,html {
+    width: 100vw;
     height: 100vh;
-    background: var(--bg-mobile) var(--bg-color);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: image();
+    color: var(--primary-text-color);
+    font-size: 16px;
 }
 
 header {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-mid1) 43%, var(--color-mid2) 57%, var(--color-end) 100%);
+    height: 5rem;
     display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 16px 24px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo */
+}
+
+.logo img {
+    max-width: 5rem;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.link a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-text-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 5rem;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.link a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-text-color);
 }
 
 main {
     padding: 32px 24px;
+    /* display: flex; depois ver como deixa uma div em baixo da outra*/
 }
 
 main h2 {
-    font-size: 40px;
+    margin-top: 7rem;
+    margin-left: 33rem;
+    font-size: 70px;
     font-weight: 300;
     color: var(--primary-text-color);
     margin-bottom: 40px;
 }
 
-main h2 strong {
+main h3 strong {
+    margin-left: 36rem;
+    margin-top: 8rem;
+    font-size: 30px;
     font-weight: 500;
 }
 
 .pontuacao {
-    background: var(--pontuacao-bg);
-    padding: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,30 +156,39 @@ main h2 strong {
 }
 
 .pontuacao strong {
-    font-size: 88px;
-    color: white;
+    font-size: 3rem;
+    color: black;
     font-weight: 500;
 }
 
 .pontuacao p {
-    color: var(--secondary-text-color);
-    font-size: 18px;
+    color: black;
+    font-size: 2rem;
 }
 
 main button {
-    padding: 16px;
-    border-radius: 12px;
-    border: none;
-    background: var(--puple);
-    color: white;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 33rem;
+    width: 16rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background: rgb(26, 26, 75);
+    color: var(--white);
     font-size: 18px;
     font-weight: 500;
     transition: background 0.3s;
     box-shadow: var(--shadow);
 }
 
+main button a {
+    text-decoration: none;
+    color: var(--white);
+}
+
 main button:hover {
-    background: var(--puple-hover);
+    background: var(--color-end);
     cursor: pointer;
 }

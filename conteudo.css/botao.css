@@ -1,0 +1,71 @@
+
+
+
+
+
+body.escuro {
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: rgba(0, 0, 0, 1);
+    --color-start: #96A9C2;
+    --color-mid1: #2B3D54;
+    --color-mid2: #2B3D54;
+    --color-end: #001228;
+    --color-endb: #173A59;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.checkbox{
+    opacity: 0; /* define que não terá opacidade */
+    position: absolute; /* poe no meio para sempre ser acionado ao clicar */
+}
+
+.label{
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center; /* alinha verticalmente */
+    justify-content: space-between; /* alinha horizontal */
+
+    background-color: #5DFB9C; /* cor de fundo do botão */
+    border-radius: 50px; /* faz ficar redondinho */
+    cursor: pointer; /* com o mouse em cima ficar pointer */
+    padding: 5px; /* faz ter um espaço maior para n ficar apertado */
+    width: 50px; /* largura */
+
+
+
+    position: relative; /* testar se precisa */
+    height: 26px; /* testar se precisa */
+
+
+    transform: scale(1.5);
+
+}
+
+.label .ball { /* bolinha que se meche quando clica */
+    background-color: #066AFF; /* cor da bolinha */
+    border-radius: 50%; /* tamanho da bolinha */
+    position: absolute; /* pra ficar sempre ali */
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px); /* começa sempre na esquerda */
+    transition: transform 0.2s linear; /* transição suave pro outro lado */
+
+}
+
+
+
+/* quando o checkbox for acionado,
+ele fará a bola do label ir para a direita*/
+.checkbox:checked + .label .ball { 
+    transform: translateX(24px)
+}

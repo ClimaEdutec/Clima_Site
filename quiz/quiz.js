@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botaoConfirmar = document.querySelector(".confirma");
     const buttonFechar = document.querySelector(".button");
     const body = document.querySelector('body');
+    const questionsAnswered = document.getElementById("questionsAnswered");
     let perguntaAtual = 0;
     let respostasCorretas = 0;
 
@@ -124,19 +125,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Funções do diálogo de confirmação
-    buttonFechar.addEventListener("click", () => {
+    function openDialog() {
         overlay.classList.add("active");
         dialog.classList.add("active");
-    });
+        document.getElementById('dialogMessage').innerText = `Você tem certeza que deseja sair e voltar para a página anterior? Você já respondeu ${perguntaAtual} de ${quizData.quizzes[0].questions.length} perguntas.`;
+    }
 
-    botaoCancelar.addEventListener("click", () => {
+    function closeDialog() {
         overlay.classList.remove("active");
         dialog.classList.remove("active");
-    });
+    }
 
-    botaoConfirmar.addEventListener("click", () => {
+    function confirmExit() {
         window.location.href = "../index.html"; // Redireciona ao confirmar saída
-    });
+    }
+
+    buttonFechar.addEventListener("click", openDialog);
+    botaoCancelar.addEventListener("click", closeDialog);
+    botaoConfirmar.addEventListener("click", confirmExit);
 
     // Carregar pergunta inicial
     carregarPergunta();
@@ -162,22 +168,18 @@ document.addEventListener("DOMContentLoaded", () => {
                         </label>
                     `).join('')}
                 </form>
-                <button id="enviar">enviar</button>
+                <button id="enviar">Enviar</button>
                 <p>${perguntaAtual + 1}/${quiz.questions.length}</p>
-                <button id="voltar">voltar</button>
+                <button id="voltar">Voltar para Página Inicial</button>
             </section>
         `;
 
         document.getElementById('enviar').addEventListener('click', verificarResposta);
-        document.getElementById('voltar').addEventListener('click', () => {
-            window.location.href = "../index.html";
-        });
+        document.getElementById('voltar').addEventListener('click', openDialog);
 
         // Alterar imagem de fundo de acordo com a pergunta
         alterarImagemDeFundo();
     }
-
-    
 
     function verificarResposta() {
         const quiz = quizData.quizzes[0];
@@ -191,6 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             perguntaAtual++;
+            questionsAnswered.value = perguntaAtual; // Atualiza o número de perguntas respondidas
+
             if (perguntaAtual < quiz.questions.length) {
                 carregarPergunta();
             } else {
@@ -201,80 +205,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function guardaResposta(evento){
-        resposta = evento.target.value
-        idInputResposta = evento.target.id
-    
-        const botaoEnviar = document.querySelector(".alternativas button")
-        botaoEnviar.addEventListener("click",validarResposta)
-    }
-    
-    
-        function validarResposta(){
-            const botaoEnviar = document.querySelector(".alternativas button")
-            botaoEnviar.innerText = "Próxima"
-            botaoEnviar.removeEventListener("click", validarResposta)
-    
-            if(pergunta === 10){
-                botaoEnviar.innerText = "Finalizar"
-                botaoEnviar.addEventListener("click", finalizar)
-                window.location.href = "../resultado.html";
-            }else{
-                botaoEnviar.addEventListener("click", proximaPergunta)
-            }
-    
-        
-            if(resposta === quiz.questions[pergunta-1].answer){
-                document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id", "correta")
-                pontos = pontos + 1
-            }else{
-                document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id","errada")
-                document.querySelector(`label[for='${respostaCorretaId}']`).setAttribute("id","correta")
-            }
-            pergunta = pergunta + 1
-        }
 
     function alterarImagemDeFundo() {
         const imagens = [
-            'url(../imgs/quiz 1.jpg)', // Imagem de fundo para a primeira pergunta
-            'url(../imgs/quiz 2.jpg)', // Imagem de fundo para a segunda pergunta
-            'url(../imgs/quiz 3.jpg)',
-            'url(../imgs/quiz 4.jpg)',
-            'url(../imgs/quiz 5.jpg)',
-            'url(../imgs/quiz 6.jpg)',
-            'url(../imgs/quiz 7.jpg)',
-            'url(../imgs/quiz 8.jpg)',
-            'url(../imgs/quiz 9.jpg)', 
-            'url(../imgs/quiz 10.jpg)',
+            '../imgs/quiz1.jpg', // Imagem de fundo para a primeira pergunta
+            '../imgs/quiz2.jpg', // Imagem de fundo para a segunda pergunta
             // Adicione mais URLs de imagens conforme necessário
         ];
 
         const imagemAtual = imagens[Math.min(perguntaAtual, imagens.length - 1)];
         body.style.backgroundImage = `url(${imagemAtual})`;
     }
-
-    function finalizar(){
-        localStorage.setItem("pontos", pontos)
-    
-        window.location.href = "../resultado/resultado.html"
-    }
-    
-    function proximaPergunta(){
-        montarPerguntas()
-        adicionarEventoInputs()
-    }
-    
-    function adicionarEventoInputs(){
-        const inputsResposta  = document.querySelectorAll(".alternativas input")
-        inputsResposta.forEach(input => {
-            input.addEventListener("click", guardaResposta)
-    
-            if (input.value === quiz.questions[pergunta-1].answer) {
-                respostasCorretas = input.id
-            }
-        })
-    }
-
-    
-
 });

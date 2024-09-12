@@ -80,15 +80,15 @@
 <body>
 
     <!-- Simulando o número de perguntas respondidas -->
-    <input type="hidden" id="questionsAnswered" value="5">
-
-    <button class="button" onclick="openDialog()">Sair</button>
+   
 
     <!-- Caixa de diálogo personalizada -->
     <div id="overlay" class="overlay"></div>
     <div id="dialog" class="dialog">
         <div class="message" id="dialogMessage">
-            Você tem certeza que deseja sair e voltar para a página anterior?
+            Você tem certeza que deseja sair e voltar para a página anter <input type="hidden" id="questionsAnswered" value="5">
+
+    <button class="button" onclick="openDialog()">Sair</button>ior?
         </div>
         <div class="buttons">
             <button class="cancel" onclick="closeDialog()">Cancelar</button>
