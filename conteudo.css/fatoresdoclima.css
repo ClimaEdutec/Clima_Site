@@ -129,6 +129,7 @@ body{
 #baixo {
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 #p{
@@ -139,7 +140,7 @@ body{
 }
 
 #baixo p {
-    width: 500px;
+    
     font-size: 31.5px;
     text-align: center;
 }

@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </label>
                     `).join('')}
                 </form>
-                <button id="enviar">enviar</button>
+                <button id="enviar" onclick="verificarResposta()">enviar</button>
                 <p>${perguntaAtual + 1}/${quiz.questions.length}</p>
                 <button id="voltar">voltar</button>
             </section>
@@ -236,16 +236,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function alterarImagemDeFundo() {
         const imagens = [
-            'url(../imgs/quiz 1.jpg)', // Imagem de fundo para a primeira pergunta
-            'url(../imgs/quiz 2.jpg)', // Imagem de fundo para a segunda pergunta
-            'url(../imgs/quiz 3.jpg)',
-            'url(../imgs/quiz 4.jpg)',
-            'url(../imgs/quiz 5.jpg)',
-            'url(../imgs/quiz 6.jpg)',
-            'url(../imgs/quiz 7.jpg)',
-            'url(../imgs/quiz 8.jpg)',
-            'url(../imgs/quiz 9.jpg)', 
-            'url(../imgs/quiz 10.jpg)',
+            'url(../imgs/quiz1.jpg)', // Imagem de fundo para a primeira pergunta
+            'url(../imgs/quiz2.jpg)', // Imagem de fundo para a segunda pergunta
+            'url(../imgs/quiz3.jpg)',
+            'url(../imgs/quiz4.jpg)',
+            'url(../imgs/quiz5.jpg)',
+            'url(../imgs/quiz6.jpg)',
+            'url(../imgs/quiz7.jpg)',
+            'url(../imgs/quiz8.jpg)',
+            'url(../imgs/quiz9.jpg)', 
+            'url(../imgs/quiz10.jpg)'
             // Adicione mais URLs de imagens conforme necessário
         ];
 

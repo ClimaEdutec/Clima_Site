@@ -49,7 +49,7 @@ footer{
 }
 
 .label .ball { /* bolinha que se meche quando clica */
-    background-color: #066AFF; /* cor da bolinha */
+    background-color: #fff; /* cor da bolinha */
     border-radius: 50%; /* tamanho da bolinha */
     position: absolute; /* pra ficar sempre ali */
     top: 2px;
