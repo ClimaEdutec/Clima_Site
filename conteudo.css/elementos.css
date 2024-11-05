@@ -52,6 +52,7 @@ body {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-endb) 100%);
     color: var(--primary-text-color);
     font-size: 16px;
+    
 }
 
 

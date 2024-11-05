@@ -6,8 +6,6 @@
 }
 
 
-
-
 .barra {
     background: linear-gradient(to left, var(--color-start) 0%, var(--color-end) 100%);
     padding: 0.5rem 1rem;

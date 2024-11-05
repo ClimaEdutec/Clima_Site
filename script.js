@@ -38,3 +38,6 @@ chk.addEventListener('change', () => {
 
 // Aplica o tema e a imagem quando a página carrega
 document.addEventListener('DOMContentLoaded', applyTheme);
+
+
+

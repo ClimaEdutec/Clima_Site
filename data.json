@@ -65,7 +65,7 @@
                 {
                     "question": "Qual elemento do clima é a quantidade de vapor de água no ar?",
                     "options": [
-                        "Umidade",
+                        "Umidade",a
                         "Temperatura",
                         "Precipitação"
                     ],

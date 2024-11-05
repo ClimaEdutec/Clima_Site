@@ -16,6 +16,7 @@ body.escuro {
 
 
 footer{
+    
     display: flex;
     justify-content: center;
     
@@ -31,7 +32,6 @@ footer{
     display: flex;
     align-items: center; /* alinha verticalmente */
     justify-content: space-between; /* alinha horizontal */
-
     background-color: #5DFB9C; /* cor de fundo do botão */
     border-radius: 50px; /* faz ficar redondinho */
     cursor: pointer; /* com o mouse em cima ficar pointer */
@@ -40,7 +40,7 @@ footer{
 
 
 
-    position: relative; /* testar se precisa */
+    position: relative; /* testar se precisa --parece que nao*/
     height: 26px; /* testar se precisa */
 
 
