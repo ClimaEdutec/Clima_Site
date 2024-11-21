@@ -19,6 +19,11 @@ footer{
     
     display: flex;
     justify-content: center;
+    justify-content: flex-start;
+    position: fixed; /* Fixa a posição em relação à janela */
+    bottom: 2%; /* Coloca o elemento nos últimos 10% da tela */
+    margin-left: 20px;
+    padding: 10px;
     
 }
 

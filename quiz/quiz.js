@@ -38,3 +38,8 @@ chk.addEventListener('change', () => {
 
 // Aplica o tema e a imagem quando a página carrega
 document.addEventListener('DOMContentLoaded', applyTheme);
+
+function startQuiz() {
+    // Redireciona o usuário para a página do quiz
+    window.location.href = "questao.html";
+}

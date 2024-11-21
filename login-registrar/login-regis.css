@@ -31,19 +31,26 @@
 body {
     background-image:url("/imgs/quiz10.jpg");
     background-repeat: no-repeat;
-    background-size: 86rem;
+    background-size: 100%;
+    height: 100vh;
     color: var(--primary-text-color);
     font-size: 16px;
 }
 
+main{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #quadro{
     background-color:rgba(206, 206, 206, 0.5);
-    display: block;
+    display: flex;
     border-radius: 10px;
     border: 0;
     justify-content: center;
     align-items: center;
-    margin-left: 20.5rem;
     height: 25rem;
     width: 40rem;
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/conteudo.css/nav.css">
+    <link rel="stylesheet" href="/login-registrar/registrar.css">
+    <script src="./cadastro.js" defer></script>
+    <title>Registrar</title>
+</head>
+<body>
+    <nav class="barra">
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/imgs/logo.png" alt="Logo da equipe do site">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li class="link"><a href="/conteudo/escolher_cont.html">CONTEÚDO</a></li>
+            <li class="link"><a href="/criadores.html">SOBRE</a></li>
+            <li class="link"><a href="/quiz/quiz.html">QUIZ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="quadro">
+        <form id="baixo">
+            <img id="loginlogo" src="/imgs/logo.png" alt="Logo">
+            <section>
+                <p>Digite seu nome</p>
+                <div id="nome">
+                    <input type="text" name="nome" placeholder="ex:nome" id="name">
+                </div>
+
+                <p>Digite seu email</p>
+                <div id="emaildiv">
+                    <input type="email" name="email" placeholder="ex:nome@gmail.com" id="email">
+                </div>
+
+                <p>Digite sua senha</p>
+                <div id="senha">
+                    <input type="password" name="senha" placeholder="ex:12e456" id="password">
+                </div>
+
+                <p>Confirme sua senha</p>
+                <div id="conf">
+                    <input type="password" name="confirmar senha" placeholder="ex:12e456" id="password-confirmation">
+                </div>
+                
+                <p>Data de nascimento</p>
+                <div id="data">
+                <input type="date" name="data" id="date">
+                </div>
+
+
+            </section>
+        <button id="button">confirmar</button>
+        </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header></header>
+   <header>
         <nav>
             <div class="logo">
             <a href="../index.html">
@@ -23,9 +23,30 @@
         </ul>
         </nav>
     </header>
-
     <main>
-        <h2>Parabéns <br></h2>
+
+        <div class="result-container">
+            <h2>Parabéns</h2>
+            <h3><strong>você acertou</strong></h3>
+            <div>
+                <section class="pontuacao">
+                    <p id="resultp">Carregando...</p>
+                    <p id="result">Carregando...</p>
+                </section>
+            </div>
+            <button> <a href="../index.html">início</a></button>
+            <button> <a href="../quiz/quiz.html">Jogar novamente</a></button>
+        </div>
+        <script>
+            // Obtem os parâmetros da URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const score = urlParams.get('score');
+            const time = urlParams.get('time');
+            // Exibe os resultados na página
+            document.getElementById('resultp').innerHTML = `${score} de 10.`;
+            document.getElementById('result').innerHTML = `em ${time} segundos.`;
+        </script>
+        <!--<h2>Parabéns <br></h2>
         <h3><strong>você acertou</strong></h3>
         <div>
             <section class="pontuacao">
@@ -33,7 +54,7 @@
             </section>
             <button> <a href="../index.html">início</a></button>
             <button> <a href="../quiz/quiz.html">Jogar novamente</a></button>
-        </div>
+        </div>-->
     </main>
 
 </body>
